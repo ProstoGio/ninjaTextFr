@@ -1,8 +1,11 @@
 const button=document.getElementById("ninjabutton");
+let ind = false;
 button.addEventListener("click", function(){
-  document.getElementById("ninjatext").innerHTML="</br></br>";
-  document.getElementById("guest").innerHTML="Omg, he vanished like a ninja Lol! I wanna be ninja too :(! Try to do same thing cmon!!";
-  button.addEventListener("click", function(){
-    document.getElementById("guest").innerHTML="";
-  });
+  if(ind == false){
+    document.getElementById("ninjatext").innerHTML="</br></br>";
+    ind = true;
+  } else {
+    document.getElementById("ninjatext").innerHTML="";
+    ind = false;
+  }
 });
